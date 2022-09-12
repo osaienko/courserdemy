@@ -3,7 +3,7 @@ User.create!(email: 'admin@admin.com', password: 'admin@admin.com', password_con
 30.times do
   Course.create!([{
     title: Faker::Educator.course_name,
-    description: Faker::TvShows::GameOfThrones.quote,
+    description: Faker::TvShows::BrooklynNineNine.quote,
     user_id: User.first.id
   }])
 end
