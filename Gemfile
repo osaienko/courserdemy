@@ -59,5 +59,7 @@ gem 'haml'
 gem "haml-rails", "~> 2.0"
 
 gem 'simple_form'
-
+# populate fake data in the db
 gem 'faker'
+# authentication
+gem 'devise'
