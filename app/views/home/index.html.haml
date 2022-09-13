@@ -45,21 +45,21 @@
 %hr
 %h2
   Popular courses
-.card-columns
+.row.row-cols-1.row-cols-md-3.g-4
   - @courses.each do |course|
     = render 'courses/course', course: course
 
 %hr
 %h2
   Top rated courses
-.card-columns
+.row.row-cols-1.row-cols-md-3.g-4
   - @courses.each do |course|
     = render 'courses/course', course: course
 
 %hr
 %h2
   Latest courses
-.card-columns
+.row.row-cols-1.row-cols-md-3.g-4
   - @latest_courses.each do |course|
     = render 'courses/course', course: course
 
