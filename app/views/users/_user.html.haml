@@ -24,7 +24,7 @@
       ago
     .card-footer
       Confirmed email?
-      - if user.confirmed_at.present?
+      - if user.confirmed?
         .badge.bg-success Yes
       - else
         .badge.bg-danger No
