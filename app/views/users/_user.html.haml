@@ -22,26 +22,9 @@
       Signed up
       = time_ago_in_words(user.created_at)
       ago
-
-
--#.card{:style => "width: 18rem;"}
--#  .card-body
--#    %h5.card-title Card title
--#    %h6.card-subtitle.mb-2.text-muted Card subtitle
--#    %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
--#    %a.card-link{:href => "#"} Card link
--#    %a.card-link{:href => "#"} Another link
-
--#.row.row-cols-1.row-cols-md-2.g-4
--#  .col
--#    .card
--#  .col
--#    .card
--#  .col
--#    .card
--#  .col
--#    .card
--#      %img.card-img-top{:alt => "...", :src => "..."}/
--#      .card-body
--#        %h5.card-title Card title
--#        %p.card-text This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    .card-footer
+      Confirmed email?
+      - if user.confirmed_at.present?
+        .badge.bg-success Yes
+      - else
+        .badge.bg-danger No
