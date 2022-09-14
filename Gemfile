@@ -69,3 +69,5 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'ransack'
 # activity tracking for ActiveRecord
 gem 'public_activity'
+# simple Roles library
+gem 'rolify'
