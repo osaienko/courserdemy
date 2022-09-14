@@ -67,3 +67,5 @@ gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
 # searching
 gem 'ransack'
+# activity tracking for ActiveRecord
+gem 'public_activity'
