@@ -1,15 +1,15 @@
-.jumbotron
-  .display-4
-    What do you want to learn today?
+.p-5.mb-4.bg-light.rounded-3
+  .container-fluid.py-5
+    .display-5.fw-bold
+      What do you want to learn today?
+    .p-4
 
-  .p-4
-
-  - if current_user
-    = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
-      .input-group
-        = f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px; ', placeholder: 'Find a course', :autocomplete => :off
-        %button#button-addon2.btn.btn-primary{:type => "submit"}
-          %span.fa.fa-search{"aria-hidden" => "true"}
+    - if current_user
+      = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
+        .input-group
+          = f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px; ', placeholder: 'Find a course', :autocomplete => :off
+          %button#button-addon2.btn.btn-primary{:type => "submit"}
+            %span.fa.fa-search{"aria-hidden" => "true"}
 
 .card-group
   .card.card-body
