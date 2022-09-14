@@ -65,3 +65,5 @@ gem 'faker'
 gem 'devise'
 # hide IDs, for security reasons and such
 gem 'friendly_id', '~> 5.2.4'
+# searching
+gem 'ransack'
