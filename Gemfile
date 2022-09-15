@@ -71,3 +71,5 @@ gem 'ransack'
 gem 'public_activity'
 # simple Roles library
 gem 'rolify'
+# Authorization helpers
+gem 'pundit'
