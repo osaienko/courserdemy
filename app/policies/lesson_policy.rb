@@ -32,7 +32,7 @@ class LessonPolicy < ApplicationPolicy
 
   def create?
     if @user
-      # @user.has_role?(:teacher)
+      @record.course.user_id == @user.id
     end
   end
 
