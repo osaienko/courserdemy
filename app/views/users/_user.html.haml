@@ -3,9 +3,9 @@
     .card-header
       .fa.fa-user
       - if user.online?
-        .text-success.far.fa-circle
+        .text-success.far.fa-solid.fa-circle
       - else
-        .text-danger.far.fa-circle
+        .text-danger.far.fa-solid.fa-circle
       = link_to user.email, user_path(user)
     .card-body
       %b=   'sign_in_count'.humanize + ":"
