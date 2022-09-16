@@ -120,4 +120,13 @@ Rails.application.configure do
   # !devise! (still have to check the user in the logs)
   # don't want to play around with AWS SES or other mailing solutions for now
   config.action_mailer.default_url_options = { :host => 'courserdemy.herokuapp.com' }
+
+  # just an example, don't actually want to flood my email with this
+  # Rails.application.config.middleware.use ExceptionNotification::Rack,
+  #   email: {
+  #     deliver_with: :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+  #     email_prefix: '[PREFIX] ',
+  #     sender_address: %{"corserdemy error" <support@corserdemy.herokuapp.com>},
+  #     exception_recipients: %w{email@gmail.com}
+  #   }
 end

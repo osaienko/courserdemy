@@ -73,3 +73,5 @@ gem 'public_activity'
 gem 'rolify'
 # Authorization helpers
 gem 'pundit'
+# provides a set of notifiers for sending notifications when errors occur in a Rack/Rails application
+gem 'exception_notification'
