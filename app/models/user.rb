@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :trackable, :confirmable
 
   has_many :courses
+  has_many :enrollments
 
   def username
     self.email.split(/@/).first
