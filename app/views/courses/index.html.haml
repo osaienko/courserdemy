@@ -1,12 +1,12 @@
 %h3
   .text-center
-    Courses
+    Courses on this page
     .badge.bg-light.text-black
       = @courses.count
 %p
 
-.row
-  .col-md-2
+.d-inline-flex.flex-wrap
+  .p-2.w-25
     = search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f|
       = f.label :title
       = f.search_field :title_cont, placeholder: 'Title', class: 'form-control form-control-sm'
@@ -26,9 +26,10 @@
       = f.submit
     = link_to 'refresh', courses_path
 
-
-  .col-md-10
-    .card-columns
-      - @courses.each do |course|
-        = render 'courses/course', course: course
+  - @courses.each do |course|
+    .p-2.w-25
+      = render 'courses/course', course: course
+/!= pagy_nav(@pagy) # default
+%p
+!= pagy_bootstrap_nav(@pagy)
 %br

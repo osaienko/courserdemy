@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   after_action :user_activity
   protect_from_forgery
 
+  include Pagy::Backend
+
   include Pundit
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 

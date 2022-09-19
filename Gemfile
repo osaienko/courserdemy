@@ -75,3 +75,5 @@ gem 'rolify'
 gem 'pundit'
 # provides a set of notifiers for sending notifications when errors occur in a Rack/Rails application
 gem 'exception_notification'
+# pagination
+gem 'pagy'
